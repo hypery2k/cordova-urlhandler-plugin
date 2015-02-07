@@ -82,10 +82,8 @@
       </feature>
     </config-file>
 
-    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App">
-		<Extensions>
+    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Extensions">
 			<Protocol Name="shopincomo" NavUriFragment="encodedLaunchUri=%s" TaskID="_default" />
-		</Extensions>
     </config-file>
 
     <source-file src="src/wp8/CustomUriMapper.cs" />
