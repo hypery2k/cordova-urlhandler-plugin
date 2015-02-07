@@ -73,6 +73,28 @@
       <clobbers target="window.plugins.launchmyapp" />
     </js-module>
   </platform>
+  
+  <!-- wp8 -->
+  <platform name="wp8">
+    <config-file target="package.windows.appxmanifest" parent="/Package/Applications/Application/Extensions">
+      <Extension Category="windows.protocol" StartPage="www/index.html">
+        <Protocol Name="$URL_SCHEME" />
+      </Extension>
+    </config-file>
+    <config-file target="package.windows80.appxmanifest" parent="/Package/Applications/Application/Extensions">
+      <Extension Category="windows.protocol" StartPage="www/index.html">
+        <Protocol Name="$URL_SCHEME" />
+      </Extension>
+    </config-file>
+    <config-file target="package.phone.appxmanifest" parent="/Package/Applications/Application/Extensions">
+      <Extension Category="windows.protocol" StartPage="www/index.html">
+        <Protocol Name="$URL_SCHEME" />
+      </Extension>
+    </config-file>
+    <js-module src="www/windows/LaunchMyApp.js" name="LaunchMyApp">
+      <clobbers target="window.plugins.launchmyapp" />
+    </js-module>
+  </platform>
 	
   <!-- windows -->
   <platform name="windows">
