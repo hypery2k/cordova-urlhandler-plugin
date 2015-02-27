@@ -1,47 +1,32 @@
 # Custom URL scheme PhoneGap Plugin
-#### launch your app by a link like this: `mycoolapp://`
-for iOS and Android, by [Eddy Verbruggen](http://www.x-services.nl)
-- This repo is for PhoneGap 3.0.0 and up
-- For PhoneGap 2.9.0 and lower, [switch to the phonegap-2.9.0-and-lower branch](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin/tree/phonegap-2.9.0-and-lower)
+launch your app by a link like this: `mycoolapp://` for iOS, Android and WP8 (PhoneGap/Cordova 3.0.0 and up)
 
-1. [Description](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#1-description)
-2. [Installation](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#2-installation)
-	2. [Automatically (CLI / Plugman)](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#automatically-cli--plugman)
-	2. [Manually](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#manually)
-	2. [PhoneGap Build](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#phonegap-build)
-3. [Usage](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#3-usage)
-4. [URL Scheme hints](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#4-url-scheme-hints)
-5. [License](https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin#5-license)
+### BEWARE: For iOS you need Cordova-iOS 3.8.0 or higher `cordova platform add ios@3.8.0`
 
-
-### BEWARE: [This Apache Cordova issue](https://issues.apache.org/jira/browse/CB-7606) causes problems with Cordova-iOS 3.7.0: the `handleOpenURL` function is not invoked upon cold start. Use Cordova-iOS 3.6.3 or lower for the moment: `cordova platform add ios@3.6.3`
-
-## 1. Description
+## Description
 
 This plugin allows you to start your app by calling it with a URL like `mycoolapp://path?foo=bar`
-
-* Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman)
-* Submitted and waiting for approval at PhoneGap Build ([more information](https://build.phonegap.com/plugins))
+](https://build.phonegap.com/plugins))
 
 ### iOS specifics
 * Forget about [using config.xml to define a URL scheme](https://build.phonegap.com/docs/config-xml#url_schemes). This plugin adds 2 essential enhancements:
   - Uniform URL scheme with Android (for which there is no option to define a URL scheme via PhoneGap configuration at all).
   - You still need to wire up the Javascript to handle incoming events. This plugin assists you with that.
-* Tested on iOS 5.1, 6 and 7.
+* Tested on iOS 7 and 8.
 
 ### Android specifics
 * Unlike iOS, there is no way to use config.xml to define a scheme for your app. Now there is.
 * Tested on Android 4.3, will most likely work with 2.2 and up.
 
 
-## 2. Installation
+## Installation
 
 ### Automatically (CLI / Plugman)
-LaunchMyApp is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
+
 Replace `mycoolapp` by a nice scheme you want to have your app listen to:
 
 ```
-$ cordova plugin add https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin.git --variable URL_SCHEME=mycoolapp
+cordova plugin add de.martinreinhardt.cordova.plugins.urlhandler --variable URL_SCHEME=mycoolapp
 ```
 (Note that the Phonegap CLI didn't support `--variable` before version 3.6.3, so please use the Cordova CLI as shown above in case you're on an older version)
 
@@ -110,7 +95,7 @@ The LaunchMyApp.js file is brought in automatically.
 
 NOTE: When Hydration is enabled at PGB, this plugin may not work.
 
-## 3. Usage
+## Usage
 
 1a\. Your app can be launced by linking to it like this from a website or an email for example (all of these will work):
 ```html
@@ -145,7 +130,7 @@ function handleOpenURL(url) {
 A more useful implementation would mean parsing the URL, saving any params to sessionStorage and redirecting the app to the correct page inside your app.
 All this happens before the first page is loaded.
 
-## 4. URL Scheme hints
+## URL Scheme hints
 Please choose a URL_SCHEME which which complies to these restrictions:
 - Don't use an already registered scheme (like `fb`, `twitter`, `comgooglemaps`, etc).
 - Use only lowercase characters.
@@ -155,7 +140,7 @@ Please choose a URL_SCHEME which which complies to these restrictions:
 TIP: test your scheme by installing the app on a device or simulator and typing yourscheme:// in the browser URL bar, or create a test HTML page with a link to your app to impress your buddies.
 
 
-## 5. License
+## License
 
 [The MIT License (MIT)](http://www.opensource.org/licenses/mit-license.html)
 
