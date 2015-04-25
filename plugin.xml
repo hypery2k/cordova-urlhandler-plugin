@@ -24,8 +24,8 @@ SOFTWARE.
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-id="de.martinreinhardt.cordova.plugins.urlhandler"
-version="0.5.1">
+id="cordova-plugin-urlhandler"
+version="0.7.0">
 
     <name>URLHandler</name>
     <description>
@@ -41,7 +41,7 @@ version="0.5.1">
     <preference name="URL_SCHEME" />
 
     <engines>
-      <engine name="cordova" version=">=3.0.0"/>
+      <engine name="cordova" version=">=3.8.0"/>
     </engines>
 
     <!-- ios -->
@@ -74,11 +74,11 @@ version="0.5.1">
 
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="LaunchMyApp">
-          <param name="android-package" value="nl.xservices.plugins.LaunchMyApp"/>
+          <param name="android-package" value="de.martinreinhardt.cordova.plugins.urlhandler.LaunchMyApp"/>
         </feature>
       </config-file>
 
-      <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="src/nl/xservices/plugins"/>
+      <source-file src="src/android/LaunchMyApp.java" target-dir="src/de/martinreinhardt/cordova/plugins/urlhandler"/>
 
       <config-file target="AndroidManifest.xml" parent="/*/application/activity">
         <intent-filter>

@@ -1,4 +1,4 @@
-package nl.xservices.plugins;
+package de.martinreinhardt.cordova.plugins.urlhandler;
 
 import android.content.Intent;
 import org.apache.cordova.CallbackContext;
