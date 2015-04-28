@@ -1,6 +1,6 @@
 # URL Handler Plugin for Apache Cordova
 
-[![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=12837874)](https://www.bountysource.com/trackers/12837874-hypery2k-cordova-urlhandler-plugin?utm_source=12837874&utm_medium=shield&utm_campaign=TRACKER_BADGE)
+[![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=12837874)](https://www.bountysource.com/trackers/12837874-hypery2k-cordova-urlhandler-plugin?utm_source=12837874&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 
 > launch your app by a link like this: `mycoolapp://` for iOS, Android and WP8 (PhoneGap/Cordova 3.0.0 and up)
 
