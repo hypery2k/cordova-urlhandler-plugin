@@ -1,7 +1,10 @@
-# Custom URL scheme PhoneGap Plugin
-launch your app by a link like this: `mycoolapp://` for iOS, Android and WP8 (PhoneGap/Cordova 3.0.0 and up)
+# URL Handler Plugin for Apache Cordova
 
-### BEWARE: For iOS you need Cordova-iOS 3.8.0 or higher `cordova platform add ios@3.8.0`
+[![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=12837874)](https://www.bountysource.com/trackers/12837874-hypery2k-cordova-urlhandler-plugin?utm_source=12837874&utm_medium=shield&utm_campaign=TRACKER_BADGE)
+
+> launch your app by a link like this: `mycoolapp://` for iOS, Android and WP8 (PhoneGap/Cordova 3.0.0 and up)
+
+*BEWARE*: For iOS you need Cordova-iOS 3.8.0 or higher `cordova platform add ios@3.8.0`
 
 ## Description
 
@@ -21,79 +24,17 @@ This plugin allows you to start your app by calling it with a URL like `mycoolap
 
 ## Installation
 
-### Automatically (CLI / Plugman)
+```
+cordova plugin add cordova-plugin-urlhandler --variable URL_SCHEME=mycoolapp
+```
 
 Replace `mycoolapp` by a nice scheme you want to have your app listen to:
 
 ```
 cordova plugin add de.martinreinhardt.cordova.plugins.urlhandler --variable URL_SCHEME=mycoolapp
 ```
-(Note that the Phonegap CLI didn't support `--variable` before version 3.6.3, so please use the Cordova CLI as shown above in case you're on an older version)
+> Note that the Phonegap CLI didn't support `--variable` before version 3.6.3, so please use the Cordova CLI as shown above in case you're on an older version
 
-The LaunchMyApp.js file is brought in automatically.
-
-Note for iOS: there was a bug in CLI which caused an error in your `*-Info.plist`.
-Please manually remove the blank line and whitespace (if any) from `NSMainNibFile` and `NSMainNibFile~ipad` (or your app won't start at all).
-
-
-### Manually
-
-#### iOS
-1\. `Copy www/ios/LaunchMyApp.js` to `www/js/plugins/LaunchMyApp.js` and reference it in your `index.html`:
-```html
-<script type="text/javascript" src="js/plugins/LaunchMyApp.js"></script>
-```
-
-2\. Add this to your `*-Info.plist` (replace `URL_SCHEME` by a nice scheme you want to have your app listen to, like `mycoolapp`):
-```xml
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleURLSchemes</key>
-    <array>
-      <string>URL_SCHEME</string>
-    </array>
-  </dict>
-</array>
-```
-
-#### Android
-1\. Copy www/android/LaunchMyApp.js to www/js/plugins/LaunchMyApp.js and reference it in your `index.html`:
-```html
-<script type="text/javascript" src="js/plugins/LaunchMyApp.js"></script>
-```
-
-2\. Add the following xml to your `config.xml` to always use the latest version of this plugin:
-```xml
-<plugin name="LaunchMyApp" value="nl.xservices.plugins.LaunchMyApp"/>
-```
-
-3\. Copy `LaunchMyApp.java` to `platforms/android/src/nl/xservices/plugins` (create the folders)
-
-4\. Add the following to your `AndroidManifest.xml` inside the `/manifest/application/activity` node (replace `URL_SCHEME` by a nice scheme you want to have your app listen to, like `mycoolapp`):
-```xml
-<intent-filter>
-  <data android:scheme="URL_SCHEME"/>
-  <action android:name="android.intent.action.VIEW" />
-  <category android:name="android.intent.category.DEFAULT" />
-  <category android:name="android.intent.category.BROWSABLE" />
-</intent-filter>
-```
-
-5\. In `AndroidManifest.xml` set the launchMode to singleTask to avoid issues like [#24]. `<activity android:launchMode="singleTask" ..`
-
-### PhoneGap Build
-
-Using LaunchMyApp with PhoneGap Build requires you to add the following xml to your `config.xml` to use the latest version of this plugin (replace `mycoolapp` by a nice scheme you want to have your app listen to):
-```xml
-<gap:plugin name="nl.x-services.plugins.launchmyapp">
-  <param name="URL_SCHEME" value="mycoolapp" />
-</gap:plugin>
-```
-
-The LaunchMyApp.js file is brought in automatically.
-
-NOTE: When Hydration is enabled at PGB, this plugin may not work.
 
 ## Usage
 
@@ -138,6 +79,21 @@ Please choose a URL_SCHEME which which complies to these restrictions:
 - Use only 1 word (no spaces).
 
 TIP: test your scheme by installing the app on a device or simulator and typing yourscheme:// in the browser URL bar, or create a test HTML page with a link to your app to impress your buddies.
+
+
+## Development
+
+### Running integration tests
+
+execute the `runIntegrationTests.sh` script for a specific platform:
+
+```
+PLATFORM='android' ./runIntegrationTests.sh
+```
+
+```
+PLATFORM='ios' ./runIntegrationTests.sh
+```
 
 
 ## License
