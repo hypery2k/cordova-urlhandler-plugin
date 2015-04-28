@@ -12,6 +12,7 @@ test_script:
   - cd ..
   - del /s /q cordova-test-app
   - git clone https://github.com/hypery2k/cordova-demo-app.git cordova-test-app
+  - cd cordova-test-app
   - grunt build
   - cordova platform add wp8
   - cordova build wp8
