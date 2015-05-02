@@ -5,28 +5,14 @@
 
 > launch your app by a link like this: `mycoolapp://` for iOS, Android and WP8 (Cordova 3.0.0+)
 
+[![NPM](https://nodei.co/npm/cordova-plugin-urlhandler.png)](https://nodei.co/npm/cordova-plugin-urlhandler/)
+
 *BEWARE*: For iOS you need Cordova-iOS 3.8.0 or higher `cordova platform add ios@3.8.0`
-
-## Description
-
-This plugin allows you to start your app by calling it with a URL like `mycoolapp://path?foo=bar`
-](https://build.phonegap.com/plugins))
-
-### iOS specifics
-* Forget about [using config.xml to define a URL scheme](https://build.phonegap.com/docs/config-xml#url_schemes). This plugin adds 2 essential enhancements:
-  - Uniform URL scheme with Android (for which there is no option to define a URL scheme via PhoneGap configuration at all).
-  - You still need to wire up the Javascript to handle incoming events. This plugin assists you with that.
-* Tested on iOS 7 and 8.
-
-### Android specifics
-* Unlike iOS, there is no way to use config.xml to define a scheme for your app. Now there is.
-* Tested on Android 4.3, will most likely work with 2.2 and up.
-
 
 ## Installation
 
-```
-cordova plugin add cordova-plugin-urlhandler --variable URL_SCHEME=mycoolapp
+```bash
+$ cordova plugin add cordova-plugin-urlhandler --variable URL_SCHEME=mycoolapp
 ```
 
 Replace `mycoolapp` by a nice scheme you want to have your app listen to:
@@ -81,6 +67,20 @@ Please choose a URL_SCHEME which which complies to these restrictions:
 
 TIP: test your scheme by installing the app on a device or simulator and typing yourscheme:// in the browser URL bar, or create a test HTML page with a link to your app to impress your buddies.
 
+## Description
+
+This plugin allows you to start your app by calling it with a URL like `mycoolapp://path?foo=bar`
+](https://build.phonegap.com/plugins))
+
+### iOS specifics
+* Forget about [using config.xml to define a URL scheme](https://build.phonegap.com/docs/config-xml#url_schemes). This plugin adds 2 essential enhancements:
+  - Uniform URL scheme with Android (for which there is no option to define a URL scheme via PhoneGap configuration at all).
+  - You still need to wire up the Javascript to handle incoming events. This plugin assists you with that.
+* Tested on iOS 7 and 8.
+
+### Android specifics
+* Unlike iOS, there is no way to use config.xml to define a scheme for your app. Now there is.
+* Tested on Android 4.3, will most likely work with 2.2 and up.
 
 ## Development
 
