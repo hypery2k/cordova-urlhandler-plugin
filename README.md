@@ -1,6 +1,6 @@
 # URL Handler Plugin for Apache Cordova
 
-[![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![npm version](https://badge.fury.io/js/cordova-plugin-urlhandler.svg)](http://badge.fury.io/js/cordova-plugin-urlhandler) [![Dependency Status](https://david-dm.org/hypery2k/cordova-plugin-urlhandler.svg)](https://david-dm.org/hypery2k/cordova-plugin-urlhandler) [![devDependency Status](https://david-dm.org/hypery2k/cordova-plugin-urlhandler/dev-status.svg)](https://david-dm.org/hypery2k/cordova-plugin-urlhandler#info=devDependencies) 
+[![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![npm version](https://badge.fury.io/js/cordova-plugin-urlhandler.svg)](http://badge.fury.io/js/cordova-plugin-urlhandler) [![Dependency Status](https://david-dm.org/hypery2k/cordova-urlhandler-plugin.svg)](https://david-dm.org/hypery2k/cordova--urlhandler-plugin) [![devDependency Status](https://david-dm.org/hypery2k/cordova-urlhandler-plugin/dev-status.svg)](https://david-dm.org/hypery2k/cordova-urlhandler-plugin#info=devDependencies) 
 
  [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=12837874)](https://www.bountysource.com/trackers/12837874-hypery2k-cordova-urlhandler-plugin?utm_source=12837874&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 
