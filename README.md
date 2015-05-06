@@ -15,14 +15,7 @@
 ```bash
 $ cordova plugin add cordova-plugin-urlhandler --variable URL_SCHEME=mycoolapp
 ```
-
 Replace `mycoolapp` by a nice scheme you want to have your app listen to:
-
-```
-cordova plugin add de.martinreinhardt.cordova.plugins.urlhandler --variable URL_SCHEME=mycoolapp
-```
-> Note that the Phonegap CLI didn't support `--variable` before version 3.6.3, so please use the Cordova CLI as shown above in case you're on an older version
-
 
 ## Usage
 
