@@ -53,13 +53,9 @@ version="0.7.0">
       <config-file target="*-Info.plist" parent="CFBundleURLTypes">
         <array>
           <dict>
-            <key>
-              CFBundleURLSchemes
-            </key>
+            <key>CFBundleURLSchemes</key>
             <array>
-              <string>
-                $URL_SCHEME
-              </string>
+              <string>$URL_SCHEME</string>
             </array>
           </dict>
         </array>
