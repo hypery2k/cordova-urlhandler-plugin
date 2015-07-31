@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-urlhandler",
-  "version": "0.7.2",
+  "version": "0.7.3-dev",
   "description": "Cordova URL Handler Plugin",
   "cordova": {
     "id": "cordova-plugin-urlhandler",
