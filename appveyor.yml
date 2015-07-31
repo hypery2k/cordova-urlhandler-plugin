@@ -18,5 +18,5 @@ test_script:
   - grunt build
   - cordova platform add wp8
   - cordova build wp8
-  - cordova plugin add ../cordova-urlhandler-plugin
+  - cordova plugin add ../cordova-urlhandler-plugin  --variable URL_SCHEME=mycoolapp
   - cordova build wp8
