@@ -1,5 +1,7 @@
 # URL Handler Plugin for Apache Cordova
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hypery2k/cordova-urlhandler-plugin.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-urlhandler-plugin) [![Build status](https://ci.appveyor.com/api/projects/status/2cu0u7g2mbglji2c?svg=true)](https://ci.appveyor.com/project/hypery2k/cordova-urlhandler-plugin) [![npm version](https://badge.fury.io/js/cordova-plugin-urlhandler.svg)](http://badge.fury.io/js/cordova-plugin-urlhandler) [![Dependency Status](https://david-dm.org/hypery2k/cordova-urlhandler-plugin.svg)](https://david-dm.org/hypery2k/cordova--urlhandler-plugin) [![devDependency Status](https://david-dm.org/hypery2k/cordova-urlhandler-plugin/dev-status.svg)](https://david-dm.org/hypery2k/cordova-urlhandler-plugin#info=devDependencies) 
 
  [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=12837874)](https://www.bountysource.com/trackers/12837874-hypery2k-cordova-urlhandler-plugin?utm_source=12837874&utm_medium=shield&utm_campaign=TRACKER_BADGE) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=mreinhardt&url=https://github.com/hypery2k/cordova-urlhandler-plugin&title=badges&language=&tags=github&category=software)
